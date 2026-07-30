@@ -50,7 +50,6 @@ if (checkbox[0].checked){
 if (checkbox[3].checked){
     alfabeto = alfabeto + simbolos;
 }
-    console.log(alfabeto);
 let senha = '';
     for (let i = 0; i < tamanhoSenha;i++ ){
         let numeroAleatorio = Math.random()*alfabeto.length;
@@ -58,4 +57,5 @@ let senha = '';
         senha = senha + letrasMaiusculas[numeroAleatorio];
     }
     campoSenha.value = senha;
+    
 }
