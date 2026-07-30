@@ -31,6 +31,7 @@ for (i=0; i < checkbox.length;i++){
     checkbox[i].onclick = geraSenha;
 }
 
+
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVXYWZ';
 const letrasMinusculas = 'abcdefghijklmnopqrstuvxywz';
 const numeros = '0123456789';
@@ -39,9 +40,23 @@ const simbolos = '!@%*?';
 gerasenha();
 
 function geraSenha(){
-    let senha = '';
+    let alfabeto = '';
+if (checkbox[0].checked){
+    alfabeto = alfabeto + letrasMaiusculas;
+}
+    if (checkbox[1].checked){
+    alfabeto = alfabeto + letrasMinusculas;
+}
+    if (checkbox[2].checked){
+    alfabeto = alfabeto + numeros;
+}
+if (checkbox[3].checked){
+    alfabeto = alfabeto + simbolos;
+}
+    console.log(alfabeto);
+let senha = '';
     for (let i = 0; i < tamanhoSenha;i++ ){
-        let numeroAleatorio = Math.random()*letrasMaiusculas.length;
+        let numeroAleatorio = Math.random()*alfabeto.length;
         numeroAleatorio = Math.floor(numeroAleatorio);
         senha = senha + letrasMaiusculas[numeroAleatorio];
     }
