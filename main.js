@@ -57,7 +57,7 @@ let senha = '';
         senha = senha + letrasMaiusculas[numeroAleatorio];
     }
     campoSenha.value = senha;
-    classificaSenha();
+    classificaSenha(alfabeto.length);
 
 }
 
